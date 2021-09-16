@@ -53,8 +53,8 @@
     </div>
     {% comment %} 商品名を追加 {% endcomment %}
     <div class="field">
-      <input type="text" id="ContactForm-productName" class="field__input" name="contact[商品名]" readonly placeholder="{{ product.title | escape }}">
-      <label class="field__label" for="ContactForm-productName">{{ product.title | escape }}</label>
+      <input type="text" id="ContactForm-productName" class="field__input" name="contact[商品名]" value="{{ product.title | escape }}" readonly>
+      <label class="field__label" for="ContactForm-productName">商品名（自動入力）</label>
     </div>
 
     <div class="field">
