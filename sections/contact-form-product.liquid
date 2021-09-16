@@ -51,10 +51,10 @@
         {%- endif -%}
       </div>
     </div>
-    {% comment %} 注文番号を追加 {% endcomment %}
+    {% comment %} 商品名を追加 {% endcomment %}
     <div class="field">
-      <input type="text" id="ContactForm-orderId" class="field__input" name="contact['注文番号']" placeholder="注文番号">
-      <label class="field__label" for="ContactForm-orderId">注文番号</label>
+      <input type="text" id="ContactForm-productName" class="field__input" name="contact['商品名']" disabled readonly placeholder="{{ product.title | escape }}">
+      <label class="field__label" for="ContactForm-productName">{{ product.title | escape }}</label>
     </div>
 
     <div class="field">

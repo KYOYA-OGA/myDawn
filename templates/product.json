@@ -53,10 +53,13 @@
     },
     "product-recommendations": {
       "type": "product-recommendations"
+    },
+    "form": {
+      "type": "contact-form-product",
+      "settings": {
+        "heading": ""
+      }
     }
   },
-  "order": [
-    "main",
-    "product-recommendations"
-  ]
+  "order": ["main", "product-recommendations", "form"]
 }
