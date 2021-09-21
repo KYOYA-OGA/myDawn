@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "main": {
+      "type": "demo-store"
+    }
+  },
+  "order": ["main"]
+}
