@@ -1,8 +1,19 @@
 {
   "sections": {
     "main": {
+<<<<<<< HEAD
       "type": "demo-store"
     }
   },
   "order": ["main"]
+=======
+      "type": "demo-store",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+>>>>>>> d16e8d7461a8321d9625765ef2e00d4d2c61ee9e
 }
