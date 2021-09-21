@@ -1,9 +1,10 @@
-<section>
-  <div>
+
+<section class="demo-store-section">
+  <div class="demo-store-img">
       {%- assign img_url = section.settings.image | img_url: "master" -%}
       <img src="{{ img_url }}">
   </div>
-  <div>
+  <div class="demo-store-heading">
       <h3>{{ section.settings.title | escape }}</h3>
       <p>{{ section.settings.text }}</p>
       <a href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
@@ -11,8 +12,34 @@
 </section>
 
 {% style %}
-  img {
+<<<<<<< HEAD
+  .demo-store-section{
+    padding:100px 0;
+  }
+  .demo-store-img {
+    width:70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  img{
     max-width: 100%;
+
+  }
+  .demo-store-heading {
+    text-align: center;
+  }
+  .demo-store-heading h3{
+    font-size: 2.5em;
+  }
+  .demo-store-heading p{}
+  .demo-store-heading a{
+    margin-top: 20px;
+    background: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
   }
 {% endstyle %}
 
