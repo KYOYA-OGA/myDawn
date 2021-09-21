@@ -1,19 +1,17 @@
 {
   "sections": {
     "main": {
-<<<<<<< HEAD
-      "type": "demo-store"
-    }
-  },
-  "order": ["main"]
-=======
       "type": "demo-store",
       "settings": {
+        "title": "見出しサンプル",
+        "text": "テキストサンプルテキストサンプルテキストサンプルテキスト",
+        "image": "shopify:\/\/shop_images\/fruits.jpg",
+        "button_link": "",
+        "button_label": "ボタン"
       }
     }
   },
   "order": [
     "main"
   ]
->>>>>>> d16e8d7461a8321d9625765ef2e00d4d2c61ee9e
 }
