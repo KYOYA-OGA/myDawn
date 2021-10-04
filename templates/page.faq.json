@@ -2,8 +2,31 @@
   "sections": {
     "main": {
       "type": "main-page-faq",
-      "settings": {}
+      "blocks": {
+        "aabe0832-09a7-4448-b180-2b3115f5883e": {
+          "type": "faq",
+          "settings": {
+            "question": "なにか質問はありますか？",
+            "answer": "<p>ここに答えがあります。<\/p>"
+          }
+        },
+        "8e78660a-947b-49a2-ae4e-cb8c2c3e87ea": {
+          "type": "faq",
+          "settings": {
+            "question": "なにか質問はありますか？",
+            "answer": "<p>ここに答えがあります。<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "aabe0832-09a7-4448-b180-2b3115f5883e",
+        "8e78660a-947b-49a2-ae4e-cb8c2c3e87ea"
+      ],
+      "settings": {
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }
