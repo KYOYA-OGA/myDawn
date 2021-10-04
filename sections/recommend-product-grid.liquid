@@ -1,0 +1,41 @@
+<div>
+  <h2>{{ section.settings.header }}</h2>
+  {% for block in section.blocks %}
+    <div>
+      <img src="{{ block.settings.image_bg | img_url: 'Medium' }}" alt="">
+      <h3></h3>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "おすすめコレクション",
+  "settings":[
+    {
+      "type": "text",
+      "id": "header",
+      "label": "見出し"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"collection",
+      "limit":4,
+      "name":"コレクション",
+      "settings":[
+        {
+          "type":"collection",
+          "id":"collection",
+          "label":"コレクション"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "おすすめコレクション"
+    }
+  ]
+}
+{% endschema %}

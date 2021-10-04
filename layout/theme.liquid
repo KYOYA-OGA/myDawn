@@ -110,6 +110,9 @@
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   }
+  [x-cloak] {
+  display: none !important;
+  }
 
   @media screen and (min-width: 750px) {
   body {
@@ -131,7 +134,7 @@
   <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print"
     onload="this.media='all'">
   {%- endif -%}
-
+  <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
   <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
 </head>
