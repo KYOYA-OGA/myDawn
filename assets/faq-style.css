@@ -1,0 +1,19 @@
+.faq-item {
+  list-style: none;
+}
+.faq-item:not(:first-child) {
+  margin-top: 20px;
+}
+.faq-item__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faq-item__arrow {
+  width: 20px;
+  height: 20px;
+}
+.faq-item__content {
+  padding: 0 0.5rem;
+}

@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'faq-style.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
@@ -11,12 +12,54 @@
   <div class="rte">
     {{ page.content }}
   </div>
+
+  <div class="faq-container" >
+    <ul class="faq-list">
+      {% for block in section.blocks %}
+        {% assign item = block.settings %}
+        <li class="faq-item" x-data="{ open: false }">
+          <div class="faq-item__title" @click="open = !open">
+            <p>{{ item.question }}</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="faq-item__arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path x-cloak x-show="!open" x-transition.duration.200ms stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                <path x-cloak x-show="open" x-transition.duration.200ms stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+              </svg>
+            </div>
+          </div>
+          <div x-cloak class="faq-item__content" x-show="open" x-transition.duration.200ms>
+            {{ item.answer }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 {% schema %}
 {
-  "name": "FAQ Page",
+  "name": "FAQページ",
   "tag": "section",
-  "class": "spaced-section"
+  "class": "spaced-section",
+  "blocks":[
+    {
+      "name": "FAQアイテム",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "質問",
+          "default": "なにか質問はありますか？"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "答え",
+          "default": "<p>ここに答えがあります。</p>"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
