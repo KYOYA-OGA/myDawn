@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ 'section-main-page.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'faq-style.css' | asset_url }}" media="print" onload="this.media='all'">
+
 
 <noscript>{{ 'section-main-page.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
@@ -14,20 +14,20 @@
   </div>
 
   <div class="faq-container" >
-    <ul class="faq-list">
+    <ul class="faq-list tw-space-y-8">
       {% for block in section.blocks %}
         {% assign item = block.settings %}
-        <li class="faq-item" x-data="{ open: false }">
-          <div class="faq-item__title" @click="open = !open">
+        <li class="faq-item tw-list-none" x-data="{ open: false }">
+          <div class="faq-item__title tw-rounded-md tw-flex tw-items-center tw-justify-between tw-px-3 tw-cursor-pointer" @click="open = !open" style="background-color: {{ item.bg_color }} ;">
             <p>{{ item.question }}</p>
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="faq-item__arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div >
+              <svg xmlns="http://www.w3.org/2000/svg" class="tw-w-8 tw-h-8 tw-align-middle" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path x-cloak x-show="!open" x-transition.duration.200ms stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 <path x-cloak x-show="open" x-transition.duration.200ms stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
               </svg>
             </div>
           </div>
-          <div x-cloak class="faq-item__content" x-show="open" x-transition.duration.200ms>
+          <div x-cloak class="faq-item__content tw-px-4" x-show="open" x-transition.duration.200ms>
             {{ item.answer }}
           </div>
         </li>
@@ -51,6 +51,12 @@
           "id": "question",
           "label": "質問",
           "default": "なにか質問はありますか？"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "質問の背景色",
+          "default": "#ffffff"
         },
         {
           "type": "richtext",
