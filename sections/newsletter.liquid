@@ -8,7 +8,7 @@
         {%- when '@app' -%}
           {% render block %}
         {%- when 'image_picker' -%}
-          <img src="{{ block.settings.image | img_url: 'Medium' }}" alt="{{ block.settings.image.alt }}" class="">
+          <img src="{{ block.settings.image | img_url: 'medium' }}" alt="{{ block.settings.image.alt }}" class="">
         {%- when 'heading' -%}
           <h2 class="h1" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
         {%- when 'paragraph' -%}
