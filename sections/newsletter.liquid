@@ -7,6 +7,8 @@
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
+        {%- when 'image_picker' -%}
+          <img src="{{ block.settings.image | img_url: 'Medium' }}" alt="{{ block.settings.image.alt }}" class="">
         {%- when 'heading' -%}
           <h2 class="h1" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
         {%- when 'paragraph' -%}
@@ -105,6 +107,18 @@
   ],
   "blocks": [
     {
+      "type": "image_picker",
+      "name": "Top Image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Choose your favarite image"
+        }
+      ]
+    },
+    {
       "type": "heading",
       "name": "t:sections.newsletter.blocks.heading.name",
       "limit": 1,
@@ -143,6 +157,9 @@
     {
       "name": "t:sections.newsletter.presets.name",
       "blocks": [
+        {
+          "type": "image_picker"
+        },
         {
           "type": "heading"
         },
