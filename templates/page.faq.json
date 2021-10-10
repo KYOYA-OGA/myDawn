@@ -7,7 +7,7 @@
           "type": "faq",
           "settings": {
             "question": "なにか質問はありますか？",
-            "bg_color": "#dbbef5",
+            "bg_color": "#b3affa",
             "answer": "<p>ここに答えがあります。<\/p>"
           }
         },
