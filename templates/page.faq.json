@@ -7,7 +7,7 @@
           "type": "faq",
           "settings": {
             "question": "なにか質問はありますか？",
-            "bg_color": "#b3affa",
+            "bg_color": "#f3f3f3",
             "answer": "<p>ここに答えがあります。<\/p>"
           }
         },
@@ -15,7 +15,7 @@
           "type": "faq",
           "settings": {
             "question": "なにか質問はありますか？",
-            "bg_color": "#dbbef5",
+            "bg_color": "#f3f3f3",
             "answer": "<p>ここに答えがあります。<\/p>"
           }
         }
